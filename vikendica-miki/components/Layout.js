@@ -5,10 +5,10 @@ const Layout = ({children}) => {
     return ( 
         <div className="layout-wrapper">
             <NavBar />
-            <div className="proba">
+            <div className="page">
                 {children}
-                <Footer />
-            </div>
+            </div>    
+            <Footer />
         </div>
      );
 }
