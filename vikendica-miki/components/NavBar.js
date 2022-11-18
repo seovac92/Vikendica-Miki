@@ -18,7 +18,6 @@ const NavBar = () => {
                         <li><Link href="/">Почетна</Link></li>
                         <li><Link href="/about">О&nbsp;нама</Link></li>
                         <li><Link href="/gallery">Галерија</Link></li>
-                        <li><Link href="/contact">Контакт</Link></li>
                     </ul>
                 </div>
                 <div className={mobileNavStatus?"active-mobile-nav":"mobile-nav"} onClick={()=>setMobileNavStatut(false)}>
@@ -26,7 +25,6 @@ const NavBar = () => {
                     <li><Link href="/">Почетна</Link></li>
                         <li><Link href="/about">О нама</Link></li>
                         <li><Link href="/gallery">Галерија</Link></li>
-                        <li><Link href="/contact">Контакт</Link></li>
                     </ul>
                 </div>    
             </nav>

@@ -243,11 +243,8 @@ footer main{
 }
 /* home-page */
 .home-hero-wrapper{
-  height: 90vh;
-  background-image: url('../public/home-hero.jpg');
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  height: 80vh;
+  background: url('../public/home-hero.jpg') no-repeat center center / cover fixed;
   filter: saturate(130%) opacity(0.92);
 }
 .home-hero-text-wrapper{
@@ -273,6 +270,47 @@ footer main{
   background-color: rgba(62,89,34,0.3);
   text-shadow: 2px 2px rgb(0 0 0 / 40%);
 }
+.home-wrapper aside{
+  padding: 30px 20px;
+  background-color: #ddd;
+  text-align: center;
+}
+.home-wrapper aside h2,
+.home-wrapper aside h3{
+  font-size: 35px;
+  color: var(--primary);
+}
+.mountain-content p{
+  font-size: 20px;
+}
+.map-container{
+  margin: 45px 0;
+}
+.google-map{
+  width: 100%;
+  height: 30vh;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 3px 3px 9px rgb(255 101 47 / 20%);
+}
+.family-business-container ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.family-business-container ul li{
+  font-size: 20px;
+  padding: 5px 0;
+}
+@media screen and (min-width: 768px) {
+  .mountain-content,
+  .map-container,
+  .family-business-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .home-hero-text-wrapper{
     padding-top: 20vh;
@@ -283,4 +321,32 @@ footer main{
   .home-hero-text-wrapper p{
     font-size: 35px;
   }
+  .map-business-wrapper{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-top: 1px solid black;
+  }
+  .mountain-content p{
+    font-size: 22px;
+  }
+  .family-business-container ul{
+    list-style-type: disc;
+  }
+  .family-business-container ul li{
+    font-size: 25px;
+  }
+  .family-business-container,
+  .map-container{
+    flex-basis: 40%;
+  }
 }
+@media screen and (min-width: 1200px) {
+  .family-business-container,
+  .map-container{
+    flex-basis: 30%;
+  }
+}
+/* about-page */
