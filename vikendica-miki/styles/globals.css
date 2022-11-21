@@ -16,7 +16,6 @@ a {
 }
 .page{
   font-family: 'Kurale', serif;
-  margin-top: 70px;
 }
 /* navbar */
 .navbar-wrapper{
@@ -30,7 +29,8 @@ nav{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary);
+  backdrop-filter: blur(4px);
+  background-color: rgba(62,89,34,0.6);
 }
 .menu-container{
   width: 100%;
@@ -105,7 +105,7 @@ nav{
 }
 .mobile-nav{
   position: fixed;
-  top: 71px;
+  top: 70px;
   width: 100%;
   transform: translateX(100%);
   transition: 0.5s all ease;
@@ -114,7 +114,7 @@ nav{
 }
 .active-mobile-nav{
   position: fixed;
-  top: 71px;
+  top: 70px;
   width: 100%;
   transform: translateX(40%);
   transition: 0.5s all ease;
@@ -135,9 +135,6 @@ nav{
   border-bottom: 1px solid #aaa;
 }
 @media screen and (min-width: 768px) {
-  .page{
-    margin-top: 90px;
-  }
   .hamburger,
   .activeHamburger,
   .mobile-nav,
@@ -182,6 +179,8 @@ footer main{
   color: #fff;
   font-size: 17px;
   font-weight: 800;
+  border-top: 20px solid #bbb;
+  border-bottom: 20px solid #bbb;
 }
 .footer-title{
   margin: 0;
@@ -242,12 +241,14 @@ footer main{
   }
 }
 /* home-page */
-.home-hero-wrapper{
-  height: 80vh;
+.home-hero{
   background: url('../public/home-hero.jpg') no-repeat center center / cover fixed;
+}
+.hero-wrapper{
+  height: 80vh;
   filter: saturate(130%) opacity(0.92);
 }
-.home-hero-text-wrapper{
+.hero-text-wrapper{
   box-sizing: border-box;
   width: fit-content;
   margin: 0 auto;
@@ -255,7 +256,7 @@ footer main{
   color: #fff;
   text-align: center;
 }
-.home-hero-text-wrapper h1{
+.hero-text-wrapper h1{
   margin: 0;
   padding: 10px 10px;
   font-size: 7vw;
@@ -263,27 +264,28 @@ footer main{
   background-color: rgba(62,89,34,0.3);
   text-shadow: 2px 2px rgb(0 0 0 / 40%);
 }
-.home-hero-text-wrapper p{
+.hero-text-wrapper p{
   margin: 0;
   padding: 0px 10px 10px;
   font-size: 3.5vw;
   background-color: rgba(62,89,34,0.3);
   text-shadow: 2px 2px rgb(0 0 0 / 40%);
 }
-.home-wrapper aside{
+aside{
   padding: 30px 20px;
   background-color: #ddd;
   text-align: center;
 }
-.home-wrapper aside h2,
-.home-wrapper aside h3{
+aside h2,
+aside h3{
   font-size: 35px;
   color: var(--primary);
 }
-.mountain-content p{
+.first-container p{
   font-size: 20px;
 }
-.map-container{
+.map-container,
+.image-container{
   margin: 45px 0;
 }
 .google-map{
@@ -304,24 +306,25 @@ footer main{
   padding: 5px 0;
 }
 @media screen and (min-width: 768px) {
-  .mountain-content,
+  .first-container,
   .map-container,
+  .image-container,
   .family-business-container{
     width: 80%;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 992px) {
-  .home-hero-text-wrapper{
+  .hero-text-wrapper{
     padding-top: 20vh;
   }
-  .home-hero-text-wrapper h1{
+  .hero-text-wrapper h1{
     font-size: 70px;
   }
-  .home-hero-text-wrapper p{
+  .hero-text-wrapper p{
     font-size: 35px;
   }
-  .map-business-wrapper{
+  .home-wrapper .second-container{
     width: 80%;
     margin: 50px auto;
     display: flex;
@@ -329,7 +332,7 @@ footer main{
     align-items: center;
     border-top: 1px solid black;
   }
-  .mountain-content p{
+  .first-content p{
     font-size: 22px;
   }
   .family-business-container ul{
@@ -339,14 +342,47 @@ footer main{
     font-size: 25px;
   }
   .family-business-container,
-  .map-container{
+  .map-container,
+  .image-container{
     flex-basis: 40%;
   }
 }
 @media screen and (min-width: 1200px) {
   .family-business-container,
-  .map-container{
+  .map-container,
+  .image-container{
     flex-basis: 30%;
   }
 }
 /* about-page */
+.about-hero{
+  background: url('../public/about-hero.jpg') no-repeat center center / cover fixed;
+  filter: saturate(80%);
+}
+.about-us-container p{
+  font-size: 20px;
+}
+.profile-image{
+  width: 70vw;
+  height: fit-content;
+}
+@media screen and (min-width: 992px) {
+  .second-container{
+    border-top: 1px solid black;
+  }
+  .image-container{
+    margin: 30px auto;
+  }
+  .profile-image{
+    width: 70%;
+  }
+  .about-wrapper .family-business-container ul{
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .profile-image{
+    width: 700px;
+  }
+}
