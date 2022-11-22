@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const About = () => {//stranica o nama,mozda neki side sa zanimljivostima u okolini!!!
     //react cloud
     //https://github.com/GoranKukic/portfolio/blob/main/src/components/Skills/icons.js
@@ -21,7 +19,7 @@ const About = () => {//stranica o nama,mozda neki side sa zanimljivostima u okol
                 </article>
                 <article className="second-container">
                 <div className="image-container">
-                    <Image className='profile-image' src="/profile.jpg" alt="mountain house" width={500} height={300}></Image>
+                    <img className='profile-image' src="/profile.jpg" alt="mountain house"/>
                 </div>
                 <div className="family-business-container">
                     <h2>Викендица Мики</h2>

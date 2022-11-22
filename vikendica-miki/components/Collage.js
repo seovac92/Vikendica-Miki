@@ -25,7 +25,7 @@ export default function Collage() {
     <>
         <div className={model?"model open":"model"}>
             <img src={tempImg} />
-            <CloseIcon onClick={()=>setModel(false)} />
+            <CloseIcon onClick={()=>{setModel(false); setTempImg('')}} />
         </div>
         <ImageList
         variant="quilted"

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -10,7 +9,7 @@ const Footer = () => {
                 <div className="footer-main-wrapper">
                     <article>
                         <p className='footer-title'>Викендица Мики</p>
-                        <Image priority src="/logo.svg" alt='logo-vikendica miki' width={300} height={140} />
+                        <img priority src="/logo.svg" alt='logo-vikendica miki' style={{width:'300px', height:'140px'}} />
                     </article>
                     <article className="footer-contact">
                         <ul className='contact-list'>

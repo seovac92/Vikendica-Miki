@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image';
 import { useState } from 'react';
 
 const NavBar = () => {
@@ -10,7 +9,7 @@ const NavBar = () => {
         <div className="navbar-wrapper">
             <nav>
                 <div className="menu-container">
-                    <Image className='logo' priority src="/logo.svg" alt='logo-vikendica miki' width={150} height={70} />
+                    <img className='logo' priority src="/logo.svg" alt='logo-vikendica miki' style={{width:'150px', height:'70px'}}/>
                     <div className="hamburger-container" onClick={()=>setMobileNavStatut(!mobileNavStatus)}>
                         <div className={mobileNavStatus?"activeHamburger":"hamburger"} />
                     </div>
